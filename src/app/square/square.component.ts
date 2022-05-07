@@ -8,6 +8,7 @@ import { Component, Input } from '@angular/core';
     </p>
   `,
   styles: [
+    'p {text-align: center; font-size: 170px; margin: 0px; line-height: 200px;}'
   ]
 })
 export class SquareComponent {
