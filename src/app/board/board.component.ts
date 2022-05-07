@@ -46,6 +46,9 @@ export class BoardComponent implements OnInit {
       [0,4,8],
       [2,4,6]
     ];
+
+    // check to see if any win conditions are met
+    // if so, return winner
     for(let i = 0; i < lines.length; i+=1) {
       const [a,b,c] = lines[i];
       if(
@@ -56,6 +59,13 @@ export class BoardComponent implements OnInit {
         return this.squares[a];
       }
     }
+
+    // no winner, and game is finished because no cells are empty
+    if(!this.squares.includes(null)){
+      return 'Tie game';
+    }
+
+    // no winner yet, and game is not yet finished, return null for winner
     return null;
   }
 
