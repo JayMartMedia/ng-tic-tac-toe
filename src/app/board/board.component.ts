@@ -28,6 +28,9 @@ export class BoardComponent implements OnInit {
   }
 
   makeMove(index: number): void {
+    // if there is already a winner, don't allow more moves
+    if (this.winner) return;
+
     if (!this.squares[index]){
       this.squares.splice(index, 1, this.player);
       this.xIsNext = !this.xIsNext;

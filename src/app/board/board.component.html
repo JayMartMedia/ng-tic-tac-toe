@@ -1,4 +1,4 @@
-<h1>Current player: {{player}}</h1>
+<h1 *ngIf="!winner">Current player: {{player}}</h1>
 
 <button (click)="newGame()">Start new Game</button>
 
